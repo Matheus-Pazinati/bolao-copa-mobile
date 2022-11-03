@@ -12,7 +12,6 @@ export function Button({ title, type = "SECONDARY", ...props }: ButtonProps) {
       rounded="sm" 
       w='full'
       h={14}
-      mb={4}
       bgColor={type === "SECONDARY" ? "red.500" : "yellow.500"}
       _pressed={{
         bg: type === "SECONDARY" ? "red.600" : "yellow.600"
