@@ -8,7 +8,7 @@ import { THEME } from './src/styles/theme'
 
 import { SignIn } from './src/screens/SignIn';
 import { Loading } from './src/components/Loading';
-import { FindPoll } from './src/screens/FindPoll';
+import { ShowPolls } from './src/screens/ShowPolls';
 
 import { AuthContextProvider } from './src/contexts/AuthContext';
 
@@ -27,7 +27,7 @@ const [fontsLoaded] = useFonts({
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <FindPoll /> : <Loading />}
+        {fontsLoaded ? <ShowPolls /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
