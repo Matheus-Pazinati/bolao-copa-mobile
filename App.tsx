@@ -8,6 +8,7 @@ import { THEME } from './src/styles/theme'
 
 import { SignIn } from './src/screens/SignIn';
 import { Loading } from './src/components/Loading';
+import { NewPoll } from './src/screens/NewPoll';
 
 import { AuthContextProvider } from './src/contexts/AuthContext';
 
@@ -26,7 +27,7 @@ const [fontsLoaded] = useFonts({
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <NewPoll /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );

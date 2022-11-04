@@ -22,7 +22,7 @@ export function SignIn() {
         onPress={signIn}
       />
 
-      <Text color="#C4C4CC" textAlign="center" mt={4}>
+      <Text color="gray.200" textAlign="center" mt={4}>
         Não utilizamos nenhuma informação além {'\n'} do seu e-mail para criação de sua conta.
       </Text>
     </Center>
