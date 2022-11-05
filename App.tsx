@@ -6,11 +6,11 @@ import { NativeBaseProvider, StatusBar } from "native-base";
 
 import { THEME } from './src/styles/theme'
 
-import { SignIn } from './src/screens/SignIn';
+import { Routes } from './src/routes';
 import { Loading } from './src/components/Loading';
-import { ShowPolls } from './src/screens/ShowPolls';
 
 import { AuthContextProvider } from './src/contexts/AuthContext';
+
 
 export default function App() {
 const [fontsLoaded] = useFonts({
@@ -27,7 +27,7 @@ const [fontsLoaded] = useFonts({
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <ShowPolls /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
