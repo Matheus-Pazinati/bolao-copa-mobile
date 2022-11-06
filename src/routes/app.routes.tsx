@@ -50,7 +50,6 @@ export function AppRoutes() {
         }}
       />
 
-      
       <Screen
         name="find"
         component={FindPoll}
