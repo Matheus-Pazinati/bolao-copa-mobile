@@ -8,12 +8,12 @@ import React, { useEffect, useState } from "react";
 
 import { Loading } from "../components/Loading";
 import { PoolCardProps } from '../components/PoolCard'
-
-import { api } from "../services/api";
 import { PoolHeader } from "../components/PoolHeader";
 import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
 import { Option } from "../components/Option";
+import { Guesses } from '../components/Guesses'
 
+import { api } from "../services/api";
 
 interface RouteParams {
   id: string
@@ -90,7 +90,8 @@ export function PollDetails() {
               onPress={() => setOptionSelected('ranking')}
             />
           </HStack>
-
+          
+          <Guesses poolId={pollDetails.id} />
         </VStack>
         :
         <EmptyMyPoolList code={pollDetails.code} />
