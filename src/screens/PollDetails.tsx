@@ -25,14 +25,13 @@ export function PollDetails() {
 
   const [optionSelected, setOptionSelected] = useState<'guesses' | 'ranking'>('guesses')
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const [pollDetails, setPollDetails] = useState<PoolCardProps>({} as PoolCardProps)
 
   const toast = useToast()
 
   async function getPollDetails() {
     try {
-
       const response = await api.get(`/pools/${id}`)
       setPollDetails(response.data.pool)
 
@@ -45,6 +44,7 @@ export function PollDetails() {
       })
 
     } finally {
+      setIsLoading(false)
     }
   }
 
